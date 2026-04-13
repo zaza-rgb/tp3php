@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Quicksand", sans-serif;
+    transition: all .2s linear;
+}
+
+/* SECTION */
+.detail{
+    margin-top: 120px;
+    display: flex;
+    justify-content: center;
+}
+
+/* CONTENEUR PRINCIPAL */
+.horizontal{
+    display: flex;
+    align-items: stretch; /* 🔥 important */
+    gap: 40px;
+}
+
+/* IMAGE */
+.image{
+    width: 350px;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image img:hover{
+    transform: scale(1.1);
+}
+
+/* TEXTE */
+.vertical{
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* BLOC TEXTE */
+.top{
+    flex: 1; /* 🔥 pousse les boutons en bas */
+}
+
+/* PRIX */
+.prix{
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+/* BOUTONS */
+.bouton{
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+/* STYLE BOUTONS */
+button{
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.acheter{
+    background-color: pink;
+    color: white;
+}
+
+.ajouter{
+    background: #ddd;
+}
+@media(max-width:1030px) {
+    .detail{
+        margin-left: 35px;
+        margin-right: 35px;
+        align-items: center;
+        justify-content: center;
+    }
+    .horizontal{
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+    }
+    .vertical{
+        width: 100%;
+
+    }
+    
+}

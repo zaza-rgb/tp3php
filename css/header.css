@@ -1,0 +1,50 @@
+:root{
+    --main-gradient: linear-gradient(to right, pink, violet);
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: "Quicksand",sans-serif;
+    transition: all 0.2s linear;
+}
+ nav {
+    background: var(--main-gradient);
+    padding: 15px 30px;
+
+ }
+.panier{
+    background: white;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.panier img{
+  width: 70%;
+}
+
+.list{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+ .list li a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+     font-size: 16px;
+    border-radius: 6px;
+}
+
+ .list li a:hover {
+     font-weight: bold;
+    font-size: 20px;
+}
+span {
+color: white;
+}

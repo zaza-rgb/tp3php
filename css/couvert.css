@@ -1,0 +1,52 @@
+
+
+
+body {
+     min-height: 100vh;
+
+    background-image: 
+        linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(0,0,0,0.2)),
+        url("../image/decouvert.jpg");
+
+   
+        background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  
+
+}
+.container{
+    width: 350px;
+    margin: auto;  
+    margin-top: 180px;        
+}
+form {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 15px;
+    color: white;
+}
+form h2 {
+    text-align: center;
+}
+form input,
+form textarea {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+}
+
+
+form .bouton {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background: pink;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}

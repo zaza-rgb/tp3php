@@ -1,0 +1,78 @@
+
+:root{
+    --main-gradient: linear-gradient(to right, pink, violet);
+}
+
+
+*{
+ margin: 0px; 
+ padding: 0px;
+ font-family:"Quicksand", sans-serif;
+ 
+}
+
+
+
+.signup{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120vh;
+}
+ h2 span{
+color:pink;
+}
+.signup .left img{
+    width: 500px;
+}
+.signup .right form{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 300px;
+    padding: 10px;
+    padding-right: 10px;
+}
+.signup .right form .formItem{
+    margin-bottom: 8px;
+    width: 100%;
+  
+
+}
+.signup .right form .formItem input{
+    width: 100%;
+    border: solid 1px gray;
+    border-radius: 12px;
+    height: 30px;
+
+}
+h2{
+font-size: 45px;
+}
+.bouton{
+    background-color: rgb(4, 4, 72);
+    height: 35px;
+    margin-top: 5px;
+    border-radius: 12px;
+    color: white;
+    border: none;
+    width: 100%;
+}
+.signup .right form .signorlog{
+margin-top: 25px;
+}
+a{
+    text-decoration: none;
+}
+.signup .right form .signorlog a{
+    color: rgb(130, 66, 220);
+}
+
+@media (max-width: 704px){
+    .signup{
+        flex-direction: column
+        ;
+
+    }
+}
