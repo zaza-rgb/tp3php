@@ -22,10 +22,11 @@
    width: 100%;
    margin-bottom: 15px;
    border-radius: 10px;
-   height: 60px;
+
 }
 .left{
     display: flex;
+    align-items: center;
 }
 .image{
 
@@ -34,15 +35,43 @@
     overflow: hidden;
     border-radius: 5px;
 }
+.image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
 .vertical{
     margin-left: 10px;
-    height: 100%;
+    
+}
+.productname{
+    font-size: 14px;
+}
+
+.prix{
+    color: gray;
+    font-size: 12px;
+}
+
+.right{
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 .right input[type="number"]{
       width: 60px;
     padding: 5px;
 }
-.large{
-    width: 60px;
+.right input[type="button"]{
+    padding: 5px 10px;
+    border: none;
+    background: rgb(217, 33, 64);
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    transition: 0.3s;
 }

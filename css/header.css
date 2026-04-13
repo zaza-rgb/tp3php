@@ -48,3 +48,49 @@
 span {
 color: white;
 }
+
+
+
+
+
+/* HAMBURGER */
+.menu-toggle {
+    display: none;
+    width: 30px;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    display: block;
+    height: 4px;
+    background: white;
+    margin: 5px 0;
+    border-radius: 2px;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .list {
+        display: none;
+        flex-direction: column;
+        background: var(--main-gradient);
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        padding: 20px;
+    }
+
+    .list.active {
+        display: flex;
+    }
+
+    .list li {
+        margin: 10px 0;
+    }
+}

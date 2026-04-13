@@ -47,6 +47,8 @@
             <input type="text"name="mdpc" placeholder="Comfirmer le mot de passe">
 
         </div>
+
+        
         <input type="submit" class="bouton" value="s'inscrire">
 
         <h5 class="signorlog">
