@@ -21,12 +21,13 @@
                     $image=htmlspecialchars($row['image']);
                     $nomprod=htmlspecialchars($row['nomprod']);
                     $typeprode=htmlspecialchars($row['typrod']);
-                    $prix=htmlspecialchars($row['prix']);
+                    $price=htmlspecialchars($row['prix']);
                     ?>
                     <form method="post" action="detailpc.php">
+                    <input type="hidden" name="idprod" value="<?php echo $row['idprod']; ?>">
                         <div class="product">
                             <div class="image">
-                            <a href="detailpc.php"> <img src="image/<?php echo htmlspecialchars($row['image']); ?>" alt="" width="100%"></a>
+                            <img src="image/<?php echo htmlspecialchars($row['image']); ?>" alt="" width="100%">
                             </div>
                             <div class="textes">
                                 <h4 class="productname"><?php echo htmlspecialchars($row['nomprod']); ?></h4>
