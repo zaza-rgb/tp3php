@@ -5,18 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/auth.css">
+    <link rel="stylesheet" href="css/footer.css">
 </head>
 <body>
     <?php
     include("./include/header.php")
     ?>
     <section class="signup">
+    <form method="post" action="traitementInscrip.php">
     <div class="left">
         <h2><span>I</span>nscription</h2>
         <img src="image/monimage.jpg" alt="">
        
     </div>
-    <div class="right"><form action="css/auth.css">
+    <div class="right">
         <div class="formItem">
             <label for="nom">Nom</label>
             <br>
@@ -54,7 +56,11 @@
         <h5 class="signorlog">
             Déjà un compte ? <a href="connectedp.php">Se connecter</a>
         </h5>
-    </form></div>
+   </div>
+    </form>
     </section>
+     <?php
+    include("./include/footer.php")
+    ?>
 </body>
 </html>

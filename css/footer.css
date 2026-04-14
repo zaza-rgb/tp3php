@@ -4,21 +4,15 @@ body {
     flex-direction: column;
 }
 
+
+
+
+
+
+
 .footer {
+    width: 100%;
     margin-top: auto;
-}
-
-
-
-.footer {
-    background: #222;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    font-size: 14px;
-}
-
-.footer {
     background: linear-gradient(to right, pink, violet);
     color: white;
     text-align: center;

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/acceuil.css">                                                                     
-       
+      <link rel="stylesheet" href="css/footer.css"> 
         
 
     
@@ -19,7 +19,7 @@
 
     <div class="center">
     <h2 class="anim-title">
-        B<span>I</span><span>E</span><span>N</span><span>V</span><span>E</span><span>N</span><span>U</span>
+        B<span>I</span><span>E</span><span>N</span><span>V</span><span>E</span><span>N</span><span>U</span><span>E</span>
         &nbsp;
         S<span>U</span><span>R</span>
         &nbsp;

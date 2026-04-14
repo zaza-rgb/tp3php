@@ -1,17 +1,21 @@
-/* CENTRAGE */
+
+
 .center {
-    height: calc(100vh - 80px);
+    flex: 1; /*  prend tout l’espace restant */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+     padding-top: 170px;
 }
+
 
 /* TEXTE ANIMÉ */
 .anim-title {
     display: flex;
     gap: 5px;
-    font-size: 2rem;
+    font-size: 4rem;
 }
 
 /* ANIMATION LETTRES */
@@ -20,7 +24,7 @@
     animation: ripple 1.2s ease-in-out infinite;
 }
 
-/* DÉLAIS (effet vague 🔥) */
+/* effet*/
 .anim-title span:nth-child(1){animation-delay: 0s;}
 .anim-title span:nth-child(2){animation-delay: 0.1s;}
 .anim-title span:nth-child(3){animation-delay: 0.2s;}
@@ -37,8 +41,9 @@
 .anim-title span:nth-child(14){animation-delay: 1.3s;}
 .anim-title span:nth-child(15){animation-delay: 1.4s;}
 .anim-title span:nth-child(16){animation-delay: 1.5s;}
+.anim-title span:nth-child(17){animation-delay: 1.6s;}
 
-/* KEYFRAMES */
+
 @keyframes ripple {
     0%, 100% {
         transform: translateY(0);

@@ -9,23 +9,26 @@
 </head>
 <body>
      <?php
-    include("./include/header.php")
+    include("./include/header.php");
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+   include 'commander.php';
+    }
     ?>
     <section class="detail">
         <div class="horizontal">
             <div class="image">
-                <img src="image/airpods.jpeg" alt="" height="100%">
+                <img src="image/<?php echo $image ?>" alt="" height="100%">
 
             </div>
                 <div class="vertical">
                     <div class="top">
                         <h2 class="productname">
-                            airpods
+                            <?php echo $nomprod ?>
                         </h2>
                         <h4 class="prix">
-                            3500fcfa
+                            <?php echo $price ?>
                         </h4>
-                        <p class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto illum esse voluptas accusantium. A explicabo repellendus, velit excepturi quaerat dolores perspiciatis corrupti ullam aliquam quibusdam reiciendis. Architecto cumque totam unde.</p>
+                        <p class="description"><?php echo $typeprode ?></p>
                     </div>
                 </div>
                 <div class="bouton">
@@ -37,7 +40,7 @@
         </div>
     </section>
      <?php
-    include("./include/footer.php")
+    include("./include/footer.php");
     ?>
 </body>
 </html>

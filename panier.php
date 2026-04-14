@@ -5,8 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/panier.css">
+    <link rel="stylesheet" href="css/footer.css">
 </head>
 <body>
+     <?php
+    include("./include/header.php")
+    ?>
     <section class="articles">
         <div class="article">
             <div class="left">
@@ -87,5 +91,8 @@
             </div>
         </div>
     </section>
+     <?php
+    include("./include/footer.php")
+    ?>
 </body>
 </html>
