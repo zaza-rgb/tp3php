@@ -14,23 +14,24 @@
     include("./include/header.php")
     ?>
     <section class="signup">
+    <form method="POST" action="connexion.php">
     <div class="left">
         <h2><span>C</span>onnexion</h2>
         <img src="image/monimage.jpg" alt="">
        
     </div>
-    <div class="right"><form action="css/auth.css">
+    <div class="right">
         
          <div class="formItem">
             <label for="email">Email</label>
             <br>
-            <input type="email"name="email" placeholder="Email">
+            <input type="email"name="email" placeholder="Email" required>
 
         </div>
          <div class="formItem">
             <label for="mdp">Password</label>
             <br>
-            <input type="text"name="mdp" placeholder="Mot de passe">
+            <input type="text"name="mdp" placeholder="Mot de passe" required>
 
         </div>
         
@@ -39,7 +40,8 @@
         <h5 class="signorlog">
             Pas encore de compte ? <a href="inscription.php">S'inscrire</a>
         </h5>
-    </form></div>
+    </div>
+    </form>
     </section>
    
 </body>

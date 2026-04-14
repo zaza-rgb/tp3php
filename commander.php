@@ -1,107 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Produits</title>
     <link rel="stylesheet" href="css/commander.css">
-  
 </head>
 <body>
-     <?php
-    include("./include/header.php")
-    ?>
+    <?php include("./include/header.php"); ?>
+
     <section class="sgrille">
         <div class="grille">
-            <div class="product">
-                <div class="image">
-                <img src="image/casque.jpeg" alt="" width="100%">
-            </div>
-                <div class="textes">
-                  <h4 class="productname">casque</h4>
-                  <p class="description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae, velit!</p>
-                    <h5 class="prix">3000 fcfa</h5>
+            <?php
+            // Liaison à la base
+            require 'liaisonbd.php';
 
-                </div>
-                <div class="bouton">
-                   <button class="detail">details</button>
-                   <button class="ajouter">ajouter au panier</button>
-                </div>
-            </div>
-
-
-
-             <div class="product">
-                <div class="image">
-                    <img src="image/airpods.jpeg" alt="" width="100%">
-                </div>
-                <div class="textes">
-                  <h4 class="productname">airpods</h4>
-                  <p class="description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae, velit!</p>
-                    <h5 class="prix">4000 fcfa</h5>
-
-                </div>
-                <div class="bouton">
-                   <button class="detail">details</button>
-                   <button class="ajouter">ajouter au panier</button>
-                </div>
-
-
-
-            </div>
-             <div class="product">
-                <div class="image">
-                <img src="image/ordinateur.png" alt="" width="100%">
-            </div>
-                <div class="textes">
-                  <h4 class="productname">PC</h4>
-                  <p class="description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae, velit!</p>
-                    <h5 class="prix">120000 fcfa</h5>
-
-                </div>
-                <div class="bouton">
-                   <button class="detail">details</button>
-                   <button class="ajouter">ajouter au panier</button>
-                </div>
-            </div>
-
-
-             <div class="product">
-                <div class="image">
-                <img src="image/téléchargement (3).jpeg" alt="" width="100%">
-            </div>
-                <div class="textes">
-                  <h4 class="productname">PC</h4>
-                  <p class="description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae, velit!</p>
-                    <h5 class="prix">2500 fcfa</h5>
-
-                </div>
-                <div class="bouton">
-                   <button class="detail">details</button>
-                   <button class="ajouter">ajouter au panier</button>
-                </div>
-            </div>
-
-
-
-             <div class="product">
-                <div class="image">
-                <img src="image/souris.jpeg" alt="" width="100%">
-            </div>
-                <div class="textes">
-                  <h4 class="productname">Souris</h4>
-                  <p class="description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae, velit!</p>
-                    <h5 class="prix">300 fcfa</h5>
-
-                </div>
-                <div class="bouton">
-                   <button class="detail">details</button>
-                   <button class="ajouter">ajouter au panier</button>
-                </div>
-            </div>
-
-
-
+            try {
+                $stmt = $com->query("SELECT * FROM produit");
+                while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+                    ?>
+                    <div class="product">
+                        <div class="image">
+                            <img src="image/<?php echo htmlspecialchars($row['image']); ?>" alt="" width="100%">
+                        </div>
+                        <div class="textes">
+                            <h4 class="productname"><?php echo htmlspecialchars($row['nomprod']); ?></h4>
+                            <p class="description"><?php echo htmlspecialchars($row['typrod']); ?></p>
+                            <h5 class="prix"><?php echo htmlspecialchars($row['prix']); ?> fcfa</h5>
+                        </div>
+                        <div class="bouton">
+                            <button class="detail">details</button>
+                            <button class="ajouter">ajouter au panier</button>
+                        </div>
+                    </div>
+                    <?php
+                }
+            } catch (PDOException $e) {
+                echo "Erreur : " . $e->getMessage();
+            }
+            ?>
         </div>
     </section>
 </body>

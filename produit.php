@@ -10,16 +10,17 @@
     <?php
     include("./include/header.php")
     ?>
+    <form method="post" action="traitementProd.php" enctype="multipart/form-data">
     <div class="container">
-        <form action="">
             <h2>ajouter un produit</h2>
-            <input type="text" name="nomp" placeholder="nom du produit" >
-            <input type="number" name="prix" placeholder="prix">
-            <input type="number" name="qte" placeholder="quantité">
+            <input type="text" name="nomp" placeholder="nom du produit" required>
+            <input type="number" name="prix" placeholder="prix" required>
+            <input type="file" name="image" required>
 
-            <textarea placeholder="Description"></textarea>
+            <textarea type="text" name="descrip" placeholder="Description"></textarea>
             <input type="submit" class="bouton">
-        </form>
+    
     </div>
+    </form>
 </body>
 </html>
