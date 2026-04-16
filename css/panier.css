@@ -63,7 +63,7 @@
       width: 60px;
     padding: 5px;
 }
-.right input[type="button"]{
+.right form button{
     padding: 5px 10px;
     border: none;
     background: rgb(217, 33, 64);
