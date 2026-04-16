@@ -12,19 +12,16 @@
     <section class="sgrille">
         <div class="grille">
             <?php
-            // Liaison à la base
             require 'liaisonbd.php';
 
             try {
                 $stmt = $com->query("SELECT * FROM produit");
                 while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-                    $image=htmlspecialchars($row['image']);
-                    $nomprod=htmlspecialchars($row['nomprod']);
-                    $typeprode=htmlspecialchars($row['typrod']);
-                    $price=htmlspecialchars($row['prix']);
+                    
                     ?>
-                    <form method="post" action="detailpc.php">
+                    <form method="post" action="detail.php">
                     <input type="hidden" name="idprod" value="<?php echo $row['idprod']; ?>">
+                    <input type="hidden" name="qte" value="1" min="1">
                         <div class="product">
                             <div class="image">
                             <img src="image/<?php echo htmlspecialchars($row['image']); ?>" alt="" width="100%">
@@ -35,8 +32,8 @@
                                 <h5 class="prix"><?php echo htmlspecialchars($row['prix']); ?> fcfa</h5>
                             </div>
                             <div class="bouton">
-                                <button class="detail">details</button>
-                            <button class="ajouter">ajouter au panier</button>
+                                <button class="detail" formaction="detailpc.php">details</button>
+                            <button name="ajouter" class="ajouter" formaction="panier.php">ajouter au panier</button>
                             </div>
                         </div>
                     </form>
