@@ -15,7 +15,7 @@
     include("./include/header.php")
     ?>
     <section class="signup">
-    <form method="post" action="connexion.php">
+    
     <div class="left">
         
         <h2><span>C</span>onnexion</h2>
@@ -23,7 +23,7 @@
        
     </div>
     <div class="right">
-        
+        <form method="post" action="connexion.php">
             <div class="formItem">
                 <label for="email">Email</label>
                 <br>
@@ -42,8 +42,9 @@
             <h5 class="signorlog">
             Pas encore de compte ? <a href="inscription.php">S'inscrire</a>
             </h5>
+         </form>
     </div>
-    </form>
+    
 </section>
  <?php
     include("./include/footer.php")

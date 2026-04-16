@@ -36,7 +36,7 @@
                             </div>
                             <div class="bouton">
                                 <button class="detail">details</button>
-                            <button class="ajouter">ajouter au panier</button>
+                               <button class="ajouter"> <a href="panier.php">ajouter au panier</a></button>
                             </div>
                         </div>
                     </form>

@@ -25,8 +25,8 @@ function toggleMenu() {
         <span></span>
     </div>
 
-
-         <h1>C<span>ommandes</span></h1>
+        <h1 class="logo">S<span>HOPALL</span></h1>
+        
         <ul class="list">
        
        <li ><a href="accueil.php">Accueil</a></li>
