@@ -10,25 +10,13 @@
 <body>
      <?php
     include("./include/header.php");
-    require 'liaisonbd.php';
+    require 'detail.php';
 
-    if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['idprod'])) {
-        $id = intval($_POST['idprod']);
-        $stmt = $com->prepare("SELECT * FROM produit WHERE idprod = ?");
-        $stmt->execute([$id]);
-        $row = $stmt->fetch(PDO::FETCH_ASSOC);
-
-        if ($row) {
-            $image = htmlspecialchars($row['image']);
-            $nomprod = htmlspecialchars($row['nomprod']);
-            $price = htmlspecialchars($row['prix']);
-            $typeprode = htmlspecialchars($row['typrod']);
-        } else {
-            echo "Produit introuvable.";
-        }
-    }
     ?>
     <section class="detail">
+    <form method="post" action="panier.php">
+        <input type="hidden" name="idprod" value="<?php echo $id; ?>">
+        <input type="hidden" name="qte" value="1" min="1">
         <div class="horizontal">
             <div class="image">
                 <img src="image/<?php echo $image ?>" alt="" height="100%">
@@ -47,11 +35,12 @@
                 </div>
                 <div class="bouton">
                     <a href=""><button class="acheter">acheter </button></a>
-                    <a href="panier.php"><button class="ajouter">ajouter au panier</button></a>
+                    <a href=""><button name="ajouter" class="ajouter" formaction="panier.php">ajouter au panier</button></a>
                     
                 </div>
             
         </div>
+    </form>
     </section>
      <?php
     include("./include/footer.php");
